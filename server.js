@@ -11,11 +11,11 @@ const superagent = require('superagent');
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
+app.get('/', (request, response) => {response.render('../views/pages/index');});
 
-app.get('/', (request, response) => {
-  response.render('../views/pages/index');
-});
+app.get('/search', (request, response) => {response.render('../views/pages/searches');});
 
+app.get('/layout', (request, response) => {response.render('../views/pages/layout/')})
 
 function getBooks (req, res) {
   let url = 'https://www.googleapis.com/books/v1/{collectionName}/resourceID?parameters';

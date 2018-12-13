@@ -1,49 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <title>Book App</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="styles/reset.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="styles/base.css" />
+    <%- include('./layout/head') %>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/base.css" />
 </head>
 <body>
   <header>
-    <div id="head1">
-      <h1>Best Books!</h1>
-      <nav>
-        <div id="menuToggle">
-          <input type="checkbox"/>
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="navMenu">
-            <a href="#"><li>Home</li></a>
-            <a href="#"><li>Search the Google Books API</li></a>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div id="head2">
-      <h2>Search by Title or Author</h2>
-    </div>
+    <%- include('./layout/header') %>
+
   </header>
   <main>
-    <div id="form">
-      <form action="/bookSearch">
-        <div id="searchBx">
-          <input type="textz" name="searchArea" />
-        </div>
-        <div id="searchRdo">
-          <div id="title">
-            Title<input type="radio" name="searchType" value="title" />
-          </div>
-          <div id="author">
-            Author<input type="radio" name="searchType" value="author" />
-          </div>
-          <input type="submit" value="Search the Google Books API" id="searchBtn">
-        </div>
-      </form>
+    <div class="results">
+      <div></div>
+      <h2>Book Title</h2>
+      <h3>Author Name</h3>
+      <p>Book description goes here...Lorem ipsum dolor sit amet, ipsum posuere suscipit elit ipsum suspendisse nullam, nunc arcu. Ligula rutrum luctus nibh arcu tortor vestibulum, aptent porta a interdum lorem. Nunc odio tellus. Donec eget a gravida leo, blandit mi lorem consectetuer enim, quisque repudiandae sit dignissim nec quisque eleifend, cras suspendisse erat pretium malesuada turpis viverra, tellus nec sodales. Suspendisse urna porta porta ac, pharetra ipsum phasellus, fusce ultrices.</p>
     </div>
   </main>
   <footer></footer>
