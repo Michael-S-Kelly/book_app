@@ -1,0 +1,10 @@
+<h2 class="editBooks"><%- 'update' === formAction ? "Update Book" : "Add Book" %></h2>
+
+<form action="<%= 'update' === formAction ? `/update/${book.id}` : '/add' %>" method="post">
+  <input type="hidden" name="_method" value="<%- 'update' === formAction ? 'put' : 'post' %>">
+  <input type="image" name="bookImage" value="<%- book.image %>" placeholder="">
+  <input type="text" name="bookTitle" value="<%- book.title %>" placeholder="enter title">
+  <input type="text" name="bookAuthor" value="<%- book.author %>" placeholder="enter author">
+  <textarea name="bookDescription" placeholder="description" cols="30" rows="10"><%- book.description %></textarea>
+  <button type="submit"><%- 'update' === formAction ?"Update Book" : "Add Book" %></button>
+</form>
