@@ -150,6 +150,7 @@ main {
   width: 78vw;
   position: relative;
   left: 0vw;
+  font-size: 5vw;
 }
 #searchRdo {
   height: 40vw;

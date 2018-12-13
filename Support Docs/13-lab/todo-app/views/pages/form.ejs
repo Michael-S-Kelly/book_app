@@ -1,0 +1,11 @@
+<h2 class="view-title"><%- 'update' === formAction ? "Update Task" : "Add Task" %></h2>
+
+<form action="<%= 'update' === formAction ? `/update/${task.id}` :'/add' %>" method="post">
+  <input type="hidden" name="_method" value="<%- 'update' === formAction ? 'put' : 'post' %>">
+  <input type="text" name="title" value="<%- task.title %>" placeholder="enter title">
+  <textarea name="description" placeholder="description" cols="30" rows="10"><%- task.description %></textarea>
+  <input type="text" name="category" value="<%- task.category %>" placeholder="enter category">
+  <input type="text" name="contact" value="<%- task.contact %>" placeholder="enter contact">
+  <input type="text" name="status" value="<%- task.status %>" placeholder="enter status">
+  <button type="submit"><%- 'update' === formAction ? "Update Task" : "Add Task" %></button>
+</form>
