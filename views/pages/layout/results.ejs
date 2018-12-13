@@ -1,0 +1,16 @@
+<link rel="stylesheet" type="text/css" media="screen" href="styles/results.css" />
+
+<section class="viewBooks container">
+  <ul id="bookList">
+    <% results.forEach(book => { %>
+      <li class="bookItem" data-id="<%= book.id %>">
+        <div class="results">
+          <div><%= book.image %></div>
+          <div><h2><%= book.title %></h2></div>
+          <div><h3><%= book.author %></h3></div>
+          <div><p><%= book.description %></p></div>
+        </div>
+      </li>
+      <% }) %>
+  </ul>
+</section>
